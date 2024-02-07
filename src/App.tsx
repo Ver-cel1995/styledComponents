@@ -7,6 +7,7 @@ import { Box } from './Components/styledComponents/Box.styled';
 import { BoxWrapper, Btn, Title, Wrap } from './Components/styledComponents/BoxWrapper';
 import { mytheme } from './styles/theme/Theme';
 import photo from './asserts/images/fine.png'
+import { Headline, HeadlineWrap, TextHadline, TitleHadline, WrapBtn, Wrapper } from './Components/styledComponents/Headline';
 
 
 function App() {
@@ -32,8 +33,22 @@ function App() {
           <Btn outlned active Backcolor={"blue"}>ХАЙ</Btn> 
           {/* Backcolor={"blue"} -> статичный способ(1) */}
         </Wrap>
-        <Img />
       </BoxWrapper>
+      <Headline>
+        <HeadlineWrap>
+          <Img/>
+          <Wrapper>
+            <TitleHadline>Headline</TitleHadline>
+            <TextHadline>
+              Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.
+            </TextHadline>
+            <WrapBtn>
+              <Btn primary fontSize="10px" active Backcolor={"rgb(78, 113, 254)"}>See more</Btn> 
+              <Btn outlned fontSize="10px" Backcolor={"rgb(78, 113, 254)"}>Save</Btn> 
+            </WrapBtn>
+          </Wrapper>
+        </HeadlineWrap>
+      </Headline>
     </div>
   );
 }
@@ -59,12 +74,13 @@ export default App;
 function Img() {
   return (
     <div>
-      <img src={photo}/>
+      <Photo src={photo}/>
     </div>
   )
 }
 
-// const Photo = styled.img`
-//   width: 100%;
-//   height: 100%;
-// `
+const Photo = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+`

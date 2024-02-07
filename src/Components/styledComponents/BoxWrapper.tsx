@@ -32,27 +32,28 @@ type BtnPropsType = {
 }
 
 export const Btn = styled.button<BtnPropsType>`
-    border: none;
+    padding: 6px 0 6px 0;
     // 1-й способ (статичный) background-color: ${props => props.Backcolor || "#760ef5"};
-    padding: 10px 20px;
     // 1-й способ (статичный) color: #f3f30d;
     font-size: ${props => props.fontSize || "2rem"};
     font-weight: bold;
     transition: all 0.5s;
+    border-radius: 5px;
+    width: 86px;
+    border: none;
 
     &:hover {
-      background-color: yellow;
+      background-color: rgb(78, 113, 254);
     }
 
 // 2-й способ outlned (динамичный)
 ${props => props.outlned && css<BtnPropsType>`
-    border: 1px solid ${props => props.Backcolor || "#f50e0e"};
+    border: 2px solid ${props => props.Backcolor || "#f50e0e"};
     background-color: transparent;
     
     
     &:hover {
-      border: 1px solid yellow;
-      box-shadow: 5px 5px 5px 5px #4800ffd3
+      color: #87D3E9
     }
   `}
    // 2-й способ primary (динамичный)
@@ -61,11 +62,7 @@ ${props => props.outlned && css<BtnPropsType>`
     background-color: ${props => props.Backcolor || "#760ef5"};
     color: snow;
       &:hover {
-      color: #000;
-      box-shadow: 5px 5px 5px 5px #4800ffd3
+      color: #87D3E9;
     }
-  `} 
-  /* ${props => props.active && css<BtnPropsType>`
-    box-shadow: 5px 5px 5px 5px #4800ffd3
-  `} */
+  `}
 `

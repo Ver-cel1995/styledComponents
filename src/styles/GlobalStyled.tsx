@@ -9,6 +9,9 @@ export const GlobalStyles = createGlobalStyle`
         padding: 0;
         margin: 0;
     }
+    p {
+        line-height: 20px;
+    }
 
     body {
         background-color: ${mytheme.colors.grey.dark}
