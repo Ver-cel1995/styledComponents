@@ -1,4 +1,11 @@
 import { styled } from "styled-components";
+import photo from './asserts/images/fine.png'
+
+type ImgPropsType = {
+    filling?: string,
+    fontSize?: string,
+    urls?: string
+}
 
 export const Headline = styled.div`
     display: flex;
@@ -38,4 +45,13 @@ export const TextHadline = styled.p`
 export const WrapBtn = styled.div`
     display: flex;
     gap: 12px;
+`
+export const Button = styled.button<ImgPropsType>`
+    background-color: ${props => props.filling || "#red"};
+`
+
+export const Photo = styled.img<ImgPropsType>`
+    border-radius: 15px;
+    background: url(${props => props.urls});
+    
 `

@@ -27,8 +27,9 @@ type BtnPropsType = {
   fontSize?: string,
   Backcolor?: string,
   primary?: boolean,
-  outlned?: boolean
-  active?: boolean
+  outlned?: boolean,
+  active?: boolean,
+  filling?: string,
 }
 
 export const Btn = styled.button<BtnPropsType>`
