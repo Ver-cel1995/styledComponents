@@ -1,10 +1,13 @@
-import { styled } from "styled-components";
+import { css, styled } from "styled-components";
 import photo from './asserts/images/fine.png'
 
-type ImgPropsType = {
+type PhotoPropsType = {
     filling?: string,
     fontSize?: string,
-    urls?: string
+    urls?: string,
+    one?: boolean
+    two?: boolean,
+    border?: string
 }
 
 export const Headline = styled.div`
@@ -46,12 +49,43 @@ export const WrapBtn = styled.div`
     display: flex;
     gap: 12px;
 `
-export const Button = styled.button<ImgPropsType>`
+export const Button = styled.button<PhotoPropsType>`
     background-color: ${props => props.filling || "#red"};
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.5s;
+    font-size: ${props => props.fontSize};
+    
+
+    ${props => props.one && css<PhotoPropsType>`
+        color: snow;
+
+        &:hover{
+            color: #FDC87C;
+        };
+    `}
+
+    ${props => props.two && css<PhotoPropsType>`
+        color: #000;
+        background-color: ${props => props.filling || "#red"};
+        border: 2px solid rgb(78, 113, 254);
+
+        &:hover{
+            background-color: rgb(78, 113, 254);
+            color: #FDC87C;
+        }
+    `};
 `
 
-export const Photo = styled.img<ImgPropsType>`
-    border-radius: 15px;
-    background: url(${props => props.urls});
-    height: 100%;
+export function PhotoSet(props: PhotoPropsType) {
+    return (
+        <div>
+            <Image src={props.urls}/>
+        </div>
+    )
+};
+
+const Image = styled.img<PhotoPropsType>`
+    border-radius: ${props => props.border};
 `

@@ -7,7 +7,8 @@ import { Box } from './Components/styledComponents/Box.styled';
 import { BoxWrapper, Btn, Title, Wrap } from './Components/styledComponents/BoxWrapper';
 import { mytheme } from './styles/theme/Theme';
 import photo from './asserts/images/fine.png'
-import { Button, Headline, HeadlineWrap, Photo, TextHadline, TitleHadline, WrapBtn, Wrapper } from './Components/styledComponents/Headline';
+import { Button, Headline, HeadlineWrap, PhotoSet, TextHadline, TitleHadline, WrapBtn, Wrapper } from './Components/styledComponents/Headline';
+
 
 
 function App() {
@@ -36,15 +37,19 @@ function App() {
       </BoxWrapper>
       <Headline>
         <HeadlineWrap>
-          <Photo urls={photo}/>
+        <PhotoSet urls={photo} border = "15px"/>
           <Wrapper>
             <TitleHadline>Headline</TitleHadline>
             <TextHadline>
               Faucibus. Faucibus. Sit sit sapien sit tempusrisu ut. Sit molestie ornare in venen.
             </TextHadline>
             <WrapBtn>
-              <Button fontSize='0.6rem' filling="blue">See more</Button> 
-              <Button fontSize='0.6rem' >Save</Button> 
+              <Button fontSize='0.7rem' filling="rgb(78, 113, 254);" one>
+                  See more
+              </Button> 
+              <Button fontSize='0.7rem' two filling="transparent">
+                  Save
+                </Button> 
             </WrapBtn>
           </Wrapper>
         </HeadlineWrap>
