@@ -36,7 +36,7 @@ function App() {
       </BoxWrapper>
       <Headline>
         <HeadlineWrap>
-          <Img/>
+          <Photo urls={photo}/>
           <Wrapper>
             <TitleHadline>Headline</TitleHadline>
             <TextHadline>
@@ -74,7 +74,7 @@ export default App;
 function Img() {
   return (
     <div>
-      <Photo/>
+      <img src={photo}/>
     </div>
   )
 }

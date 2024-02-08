@@ -53,5 +53,5 @@ export const Button = styled.button<ImgPropsType>`
 export const Photo = styled.img<ImgPropsType>`
     border-radius: 15px;
     background: url(${props => props.urls});
-    
+    height: 100%;
 `
